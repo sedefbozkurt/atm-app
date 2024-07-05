@@ -1,0 +1,26 @@
+{
+  "users": [
+      {
+          "id": 1,
+          "first_name": "Ali",
+          "last_name": "Gümüş",
+          "username": "user1",
+          "password": "1234",
+          "balance": 1000.0,
+          "history": [
+              {"date": "2024-07-01", "transaction": "Hesap oluşturuldu."}
+          ]
+      },
+      {
+          "id": 2,
+          "first_name": "Ayşe",
+          "last_name": "Yılmaz",
+          "username": "user2",
+          "password": "5678",
+          "balance": 500.0,
+          "history": [
+              {"date": "2024-07-01", "transaction": "Hesap oluşturuldu."}
+          ]
+      }
+  ]
+}
