@@ -1,26 +1,52 @@
 {
-  "users": [
+   "users": [
       {
-          "id": 1,
-          "first_name": "Ali",
-          "last_name": "Gümüş",
-          "username": "user1",
-          "password": "1234",
-          "balance": 1000.0,
-          "history": [
-              {"date": "2024-07-01", "transaction": "Hesap oluşturuldu."}
-          ]
+         "id": 1,
+         "first_name": "Ali",
+         "last_name": "Gümüş",
+         "username": "user1",
+         "password": "password",
+         "balance": 3345.0,
+         "history": [
+            {
+               "date": "2024-07-01",
+               "transaction": "Hesap oluşturuldu."
+            },
+            {
+               "date": "2024-07-05 13:31:06.161964",
+               "transaction": "500.0 ₺ user2 hesabına transfer edildi"
+            },
+            {
+               "date": "2024-07-05 13:33:40.464347",
+               "transaction": "1000.0 ₺ yatırıldı."
+            },
+            {
+               "date": "2024-07-05 13:36:28.242548",
+               "transaction": "2345.0 ₺ yatırıldı."
+            },
+            {
+               "date": "2024-07-05 13:42:08.370971",
+               "transaction": "500.0 ₺ çekildi."
+            }
+         ]
       },
       {
-          "id": 2,
-          "first_name": "Ayşe",
-          "last_name": "Yılmaz",
-          "username": "user2",
-          "password": "5678",
-          "balance": 500.0,
-          "history": [
-              {"date": "2024-07-01", "transaction": "Hesap oluşturuldu."}
-          ]
+         "id": 2,
+         "first_name": "Ayşe",
+         "last_name": "Yılmaz",
+         "username": "user2",
+         "password": "5678",
+         "balance": 1000.0,
+         "history": [
+            {
+               "date": "2024-07-01",
+               "transaction": "Hesap oluşturuldu."
+            },
+            {
+               "date": "2024-07-05 13:31:06.162916",
+               "transaction": "500.0 ₺ user1 hesabından transfer edildi"
+            }
+         ]
       }
-  ]
+   ]
 }

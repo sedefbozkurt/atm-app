@@ -6,14 +6,14 @@ from datetime import datetime
 
 def loadUsers():
   try:
-    with open("users.json", "r") as file:
+    with open("users.json", "r", encoding='utf-8') as file:
       return json.load(file)["users"]
   except FileNotFoundError:
     return []
 
 def saveUsers(users):
-  with open("users.json", "w") as file:
-    return json.dump({"users": users}, file, indent=3)
+  with open("users.json", "w", encoding='utf-8') as file:
+    return json.dump({"users": users}, file, indent=3, ensure_ascii=False)
 
 def findUser(users, username, password):
   for user in users:
@@ -21,9 +21,15 @@ def findUser(users, username, password):
       return user
   return None
 
+def findUserByUserName(users, username):
+  for user in users:
+    if user['username'] == username:
+      return user
+  return None
+
 def login(users):
   username = input("Kullanıcı adı: ")
-  password = input("Parola: ")
+  password = getpass.getpass("Parola: ")
   user = findUser(users, username, password)
   if user:
     return user
@@ -64,7 +70,7 @@ def withdrawMoney(user):
 def showHistory(user):
   print("\nHesap Geçmişi:")
   for record in user['history']:
-    print(f"İşlem Tarihi: {record['']}, İşlem: {record['transaction']}")
+    print(f"İşlem Tarihi: {record['date']}, İşlem: {record['transaction']}")
 
 def changePassword(user):
   currentPassword = getpass.getpass("Mevcut parola: ")
@@ -78,12 +84,12 @@ def changePassword(user):
 def transferMoney(users, user):
   amount = getAmountInput("Transfer edilecek miktarı girin: ")
   recipientUsername = input("Alıcının kullanıcı adını girin: ")
-  recipient = findUser(users, recipientUsername, "")
+  recipient = findUserByUserName(users, recipientUsername)
   if recipient and user['balance'] >= amount:
     user['balance'] -= amount
     user['history'].append({"date": str(datetime.now()), "transaction": f"{amount} ₺ {recipientUsername} hesabına transfer edildi"})
     recipient['balance'] += amount
-    user['history'].append({"date": str(datetime.now()), "transaction": f"{amount} ₺ {user['username']} hesabından transfer edildi"})
+    recipient['history'].append({"date": str(datetime.now()), "transaction": f"{amount} ₺ {user['username']} hesabından transfer edildi"})
     print(f"{amount} ₺ {recipientUsername} hesabına transfer edildi")
   else:
     print("Transfer işlemi gerçekleştirilemedi")
@@ -97,7 +103,7 @@ def main():
       user = login(users)
       if user:
         while True:
-          print("\n1. Bakiyeni Kontrol Et\n2. Para Yatır\n3. Para Çek\n4. Hesap Geçmişi\n5. Şifre Değiştir\n6. Para Transferi\n7. Çıkış")
+          print("\n1. Bakiyeni Kontrol Et\n2. Para Yatır\n3. Para Çek\n4. Hesap Geçmişi\n5. Parola Değiştir\n6. Para Transferi\n7. Çıkış")
           choice = input("Seçiminiz: ")
           if choice == '1':
             checkBalance(user)
