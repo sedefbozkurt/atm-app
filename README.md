@@ -1,11 +1,14 @@
 # Bankamatik Uygulaması
 
-Kullanıcıların bakiyeyi kontrol etmesine, para yatırmasına ve para çekmesine olanak tanıyan Python'daki basit bir bankamatik uygulaması
+Bu proje, temel bankacılık işlemlerini gerçekleştiren bir bankamatik (ATM) uygulamasıdır. Kullanıcılar bakiye kontrolü, para yatırma, para çekme, hesap geçmişi görüntüleme, şifre değiştirme ve para transferi gibi işlemleri gerçekleştirebilirler. Uygulama verileri bir JSON dosyasında saklar.
 
 ## Özellikler
-- Bakiye kontrolü
-- Para yatırma
-- Para çekme
+- **Bakiye Kontrolü:** Kullanıcı mevcut bakiyesini görüntüleyebilir. 
+- **Para Yatırma:** Kullanıcı hesabına para yatırabilir.
+- **Para Çekme:** Kullanıcı hesabından para çekebilir.
+- **Hesap Geçmişi:** Kullanıcı, hesabındaki tüm işlemleri tarih sırasına göre görüntüleyebilir.
+- **Şifre Değiştirme:** Kullanıcı şifresini değiştirebilir.
+- **Para Transferi:** Kullanıcı başka bir kullanıcı hesabına para transferi yapabilir.
 
 ## Gereksinimler
 - Python 3.x
