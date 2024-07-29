@@ -4,7 +4,7 @@ Bu proje, temel bankacılık işlemlerini gerçekleştiren bir bankamatik (ATM) 
 
 ## Özellikler
 
-- **Bakiye Kontrolü:** Kullanıcı mevcut bakiyesini görüntüleyebilir. 
+- **Bakiye Kontrolü:** Kullanıcı mevcut bakiyesini görüntüleyebilir.
 - **Para Yatırma:** Kullanıcı hesabına para yatırabilir.
 - **Para Çekme:** Kullanıcı hesabından para çekebilir.
 - **Hesap Geçmişi:** Kullanıcı, hesabındaki tüm işlemleri tarih sırasına göre görüntüleyebilir.
