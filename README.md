@@ -20,4 +20,4 @@ Bu proje, temel bankacılık işlemlerini gerçekleştiren bir bankamatik (ATM) 
 1. Repoyu klonlayın:
 
    ```sh
-   git clone https://github.com/sedefbozkurt/atmApp.git
+   git clone https://github.com/sedefbozkurt/atm_app.git
